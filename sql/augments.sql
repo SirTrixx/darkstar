@@ -1,9 +1,9 @@
 /*
 MySQL Data Transfer
 Source Host: localhost
-Source Database: dspdb
+Source Database: dsptest
 Target Host: localhost
-Target Database: dspdb
+Target Database: dsptest
 Date: 02/03/2014 11:46:00 PM
 */
 

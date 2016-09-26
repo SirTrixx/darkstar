@@ -67,7 +67,7 @@ struct map_config_t
     uint16 mysql_port;              // mysql port     -> 3306
     const int8 *mysql_login;        // mysql login    -> default root
     const int8 *mysql_password;     // mysql pass     -> default nullptr
-    const int8 *mysql_database;     // mysql database -> default dspdb
+    const int8 *mysql_database;     // mysql database -> default dsptest
 
     string_t server_message;
     string_t server_message_fr;

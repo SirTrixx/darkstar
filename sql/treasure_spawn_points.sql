@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.28,for Win64 (x86)
 --
--- Host: 10.0.0.10    Database: dspdb
+-- Host: 10.0.0.10    Database: dsptest
 -- ------------------------------------------------------
 -- Server version	5.5.28
 

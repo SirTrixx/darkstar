@@ -4,7 +4,7 @@ Navicat MySQL Data Transfer
 Source Server         : DarkStar
 Source Server Version : 50529
 Source Host           : localhost:3306
-Source Database       : dspdb
+Source Database       : dsptest
 
 Target Server Type    : MYSQL
 Target Server Version : 50529

@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.32, for Win32 (x86)
 --
--- Host: 127.0.0.1    Database: dspdb
+-- Host: 127.0.0.1    Database: dsptest
 -- ------------------------------------------------------
 -- Server version	5.5.32
 

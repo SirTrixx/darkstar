@@ -925,7 +925,7 @@ int32 map_config_default()
     map_config.mysql_host = "127.0.0.1";
     map_config.mysql_login = "root";
     map_config.mysql_password = "root";
-    map_config.mysql_database = "dspdb";
+    map_config.mysql_database = "dsptest";
     map_config.mysql_port = 3306;
     map_config.server_message = "";
     map_config.server_message_fr = "";

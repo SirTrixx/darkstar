@@ -1,9 +1,9 @@
 /*
 MySQL Data Transfer
 Source Host: 192.168.0.140
-Source Database: dspdb
+Source Database: dsptest
 Target Host: 192.168.0.140
-Target Database: dspdb
+Target Database: dsptest
 Date: 1/21/2015 1:06:39 PM
 */
 

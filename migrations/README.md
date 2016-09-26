@@ -1,4 +1,4 @@
-Migrating DSPDB Database
+Migrating dsptest Database
 ========================
 
 This folder contains python scripts to migrate your database data to a newer

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Serveur: localhost
--- Généré le : Sam 25 Juin 2011 à 10:09
+-- Gï¿½nï¿½rï¿½ le : Sam 25 Juin 2011 ï¿½ 10:09
 -- Version du serveur: 6.0.0
 -- Version de PHP: 5.2.9-2
 
@@ -16,7 +16,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `dspdb`
+-- Base de donnï¿½es: `dsptest`
 --
 
 -- --------------------------------------------------------

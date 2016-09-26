@@ -56,7 +56,7 @@ struct login_config_t
     uint16      mysql_port;         // mysql port     -> 3306
     const char* mysql_login;        // mysql login    -> default root
     const char* mysql_password;     // mysql pass     -> default NULL
-    const char* mysql_database;     // mysql database -> default dspdb
+    const char* mysql_database;     // mysql database -> default dsptest
 
     uint32 search_server_port;      // search_server_port -> 54002
 
