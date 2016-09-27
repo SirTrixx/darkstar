@@ -320,12 +320,15 @@ function CharCreate(player)
     -- ADD ADVENTURER COUPON
     player:addItem(0x218);
 
+    -- ADD AN INFINITE BLACK DROP
+    player:addItem(0x10A9);
+
     --SET TITLE
     player:addTitle(NEW_ADVENTURER);
 
     -- Needs Moghouse Intro
-    player:setVar("MoghouseExplication",1);
-    
+    player:setVar("MoghouseExplication",0);
+
 end;
 
 function onPlayerLevelUp(player)

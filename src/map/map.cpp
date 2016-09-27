@@ -946,6 +946,7 @@ int32 map_config_default()
     map_config.mob_speed_mod = 0;
     map_config.skillup_chance_multiplier = 2.5f;
     map_config.craft_chance_multiplier = 2.6f;
+    map_config.craft_skillup_cap = 9.0f;
     map_config.skillup_amount_multiplier = 1;
     map_config.craft_amount_multiplier = 1;
     map_config.craft_day_matters = 1;
@@ -983,7 +984,7 @@ int32 map_config_default()
     map_config.audit_linkshell = 0;
     map_config.msg_server_port = 54003;
     map_config.msg_server_ip = "127.0.0.1";
-    map_config.healing_tick_delay = 10;
+    map_config.healing_tick_delay = 2;
     return 0;
 }
 
@@ -1192,6 +1193,10 @@ int32 map_config_read(const int8* cfgName)
         else if (strcmp(w1, "craft_chance_multiplier") == 0)
         {
             map_config.craft_chance_multiplier = atof(w2);
+        }
+        else if (strcmp(w1, "craft_skillup_cap") == 0)
+        {
+            map_config.craft_skillup_cap = atof(w2);
         }
         else if (strcmp(w1, "skillup_amount_multiplier") == 0)
         {

@@ -731,13 +731,17 @@ void CBattleEntity::SetMLevel(uint8 mlvl)
         Sql_Query(SqlHandle, "UPDATE char_stats SET mlvl = %u WHERE charid = %u LIMIT 1;", m_mlvl, this->id);
 }
 
+// Enables equal (rather than halved) subjob levels for PCs
 void CBattleEntity::SetSLevel(uint8 slvl)
 {
-    m_slvl = (slvl > (m_mlvl >> 1) ? (m_mlvl == 1 ? 1 : (m_mlvl >> 1)) : slvl);
-
-    if (this->objtype & TYPE_PC)
+    if (this->objtype & TYPE_PC) {
+        m_slvl = (slvl > m_mlvl ? m_mlvl : slvl);
         Sql_Query(SqlHandle, "UPDATE char_stats SET slvl = %u WHERE charid = %u LIMIT 1;", m_slvl, this->id);
+    } else {
+    m_slvl = (slvl > (m_mlvl >> 1) ? (m_mlvl == 1 ? 1 : (m_mlvl >> 1)) : slvl);
+    }
 }
+
 
 /************************************************************************
 *																		*
