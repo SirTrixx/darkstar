@@ -97,6 +97,7 @@ struct map_config_t
     float  craft_chance_multiplier;   // Constant used in the crafting skill-up formula that has a strong effect on skill-up rates
     float  skillup_amount_multiplier; // Used to increase the amount of skill gained during skill up
     float  craft_amount_multiplier;   // Used to increase the amount of skill gained during skill up
+    float  craft_skillup_cap;         // Used to enforce an upper bound on the amount of skill gained from a single synth
     bool   craft_day_matters;         // Enable/disable Element day factor in synthesis
     bool   craft_moonphase_matters;   // Enable/disable Moon phase factor in synthesis
     bool   craft_direction_matters;   // Enable/disable Compass direction factor in synthesis

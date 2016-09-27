@@ -574,9 +574,9 @@ int32 doSynthSkillUp(CCharEntity* PChar)
 				if (map_config.craft_amount_multiplier > 1)
 				{
 					skillAmount += skillAmount * map_config.craft_amount_multiplier;
-					if (skillAmount > 9)
+					if (skillAmount > map_config.craft_skillup_cap)
 					{
-						skillAmount = 9;
+						skillAmount = map_config.craft_skillup_cap;
 					}
 				}
 
