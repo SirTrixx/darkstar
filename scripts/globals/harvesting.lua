@@ -54,7 +54,7 @@ function startHarvesting(player,zone,npc,trade,csid)
             SetServerVariable("[HARVESTING]Zone "..zone,GetServerVariable("[HARVESTING]Zone "..zone) + 1);
         end
 
-        if (GetServerVariable("[HARVESTING]Zone "..zone) >= 3) then
+        if (GetServerVariable("[HARVESTING]Zone "..zone) >= 12) then
             getNewHarvestingPositionNPC(player,npc,zone);
         end
         if (player:getQuestStatus(AHT_URHGAN,VANISHING_ACT) == QUEST_ACCEPTED and player:hasKeyItem(RAINBOW_BERRY) == false and broke ~= 1 and zone == 51) then

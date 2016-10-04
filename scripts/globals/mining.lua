@@ -57,8 +57,8 @@ local extracted = {
         {0210,0x0386}, -- 2.10% Demon Horn
         {0140,0x0286}, -- 1.40% Adaman Ore
         {0030,0x02AD} -- 0.30% Khroma Ore
---      {1560,0x0B2C} -- 15.60% Slab of Plumbago quest item 
-    
+--      {1560,0x0B2C} -- 15.60% Slab of Plumbago quest item
+
     },
     [62] = { -- Halvung
         {2010,0x0971}, -- 20.10% Aht Urhgan Brass
@@ -127,7 +127,7 @@ local extracted = {
         {0190,0x02E0}, -- 1.9% Silver Ore
         {0180,0x0285} -- 0.4% Darksteel Ore
 --      {0000,0x0000} -- Sturdy metal strip 16.7% for a quest
-    
+
     },
     [196] = { -- Gusgen Mines
         {1890,0x4390}, -- 18.90% Pebble
@@ -141,7 +141,7 @@ local extracted = {
         {1280,0x02E1}, -- 1.8% Gold Ore
         {1280,0x0284} -- 0.80% Mythril Ore
 --      {0000,0x0000} -- Sturdy metal strip 16.7% for a quest
-    
+
     },
     [205] = { -- Ifrit's Cauldron
         {0020,1255},
@@ -290,7 +290,7 @@ local coordinates = {
         {133.975,7.184,-131.237},
         {16.606,8.071,-119.420},
         {52.669,6.997,-107.651},
-        {66.074,7.700,-151.352} 
+        {66.074,7.700,-151.352}
     },
     [143] = { -- Palborough Mines
         {-68.388,-7.680,188.517},
@@ -344,7 +344,7 @@ function startMining(player, zone, npc, trade, cutsceneId)
         --printf("Mining: full: %s, item: %s, hitCount: %s, id: %s", full, item, hitCount, npc);
         if (item ~= 0) then
             if (hitCount == -1) then -- hits will only ever be -1 after a server reset.
-                hitCount = math.random(4,5);
+                hitCount = math.random(8,12);
             end
             if (hitCount == 0) then
                 moveMiningPoint(player,npc,zone);
@@ -383,7 +383,7 @@ end;
 -- Determine the obtained item.
 -------------------------------------------------
 
-function getMiningItem(player,zone) 
+function getMiningItem(player,zone)
     -- declare the winning item!
     local item = 0;
     if (math.random(0,100) >= MINING_RATE) then
@@ -410,7 +410,7 @@ function getMiningItem(player,zone)
     -- find out the winning item from the drops array.
     for i=1,#drops do
         countPosition = countPosition+drops[i][1]; -- [1] = rate, [2] = item
-        if (countPosition >= tickerStop) then 
+        if (countPosition >= tickerStop) then
             item = drops[i][2]; -- [1] = rate, [2] = item
             break;
         end;
@@ -453,12 +453,12 @@ function moveMiningPoint(player,npc,zone)
     end
 
     if (newIndex == -1) then
-        npc:setLocalVar("HIT_COUNT",math.random(4,6));
+        npc:setLocalVar("HIT_COUNT",math.random(8,12));
         npc:hideNPC(300);
         --printf("Couldn't find this mining points current index! Hiding for 5 minutes");
     else
         local position = positions[newIndex];
-        npc:setLocalVar("HIT_COUNT",math.random(4,6));
+        npc:setLocalVar("HIT_COUNT",math.random(8,12));
         npc:hideNPC(120);
         npc:queue(3000,doMove(npc, position[1], position[2], position[3]));
     end
