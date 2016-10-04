@@ -201,18 +201,18 @@ function onTrigger(player,npc)
     end
 end;
 
--- 0x0032 : 30 sceau conférie : choix entre clotho et lachésis
--- 0x0018 : Après achat d'un orb (qu'bia, yughott, palborough, giddeus)
--- 0x0008 : Après achat d'un orb (yughott, palborough, giddeus, qu'bia, ghelsba)
--- 0x0004 : Après achat d'un orb (yughott, palborough, giddeus, ghelsba)
--- 0x000a : Après achat d'un orb (yughott, palborough, giddeus)
+-- 0x0032 : 30 sceau confï¿½rie : choix entre clotho et lachï¿½sis
+-- 0x0018 : Aprï¿½s achat d'un orb (qu'bia, yughott, palborough, giddeus)
+-- 0x0008 : Aprï¿½s achat d'un orb (yughott, palborough, giddeus, qu'bia, ghelsba)
+-- 0x0004 : Aprï¿½s achat d'un orb (yughott, palborough, giddeus, ghelsba)
+-- 0x000a : Aprï¿½s achat d'un orb (yughott, palborough, giddeus)
 -- 0x0009 : Trade d'un orb ? (yughott, palborough, giddeus, ghelsba)
 -- 0x0005 : Trade d'un orb ? (yughott, palborough, giddeus, ghelsba)
 -- 0x000b : Trade d'un orb ? (yughott, palborough, giddeus)
 -- 0x001a : Trade d'un orb ? (qu'bia, yughott, palborough, giddeus)
 -- 0x001b : Trade d'un orb ? (qu'bia, chambre des oracles)
--- 0x0016 : Trade d'un orb utilisé (il le recup)
--- 0x0019 : Un seul échange autorisé par semaine
+-- 0x0016 : Trade d'un orb utilisï¿½ (il le recup)
+-- 0x0019 : Un seul ï¿½change autorisï¿½ par semaine
 -- 0x0141 : trade sceau + nombre player:startEvent(0x0141,0,15);
 --          0 shbete, 1 s-confrerie, 2 s-demons, 3 s-seigneurdes hombre
 
@@ -297,9 +297,9 @@ function onEventFinish(player,csid,option)
 -------- Begin BCNM orb Handout --------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
     elseif (csid == 0x0142) then
-        if (option == 1 and BeastmensSeal >= 20) then  -- Player asked for Cloudy orb
+        if (option == 1 and BeastmensSeal >= 5) then  -- Player asked for Cloudy orb
             if (player:getFreeSlotsCount() >= 1 and player:hasItem(1551) == false) then
-                player:delSeals(20,0);
+                player:delSeals(5,0);
                 player:addItem(1551);
                 player:messageSpecial(ITEM_OBTAINED,1551);
                 player:setVar("CloudyOrbIsCracked",0);
@@ -308,9 +308,9 @@ function onEventFinish(player,csid,option)
             else
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,1551);
             end
-        elseif (option == 2 and BeastmensSeal >= 30) then   -- Player asked for Sky orb
+        elseif (option == 2 and BeastmensSeal >= 5) then   -- Player asked for Sky orb
             if (player:getFreeSlotsCount() >= 1 and player:hasItem(1552) == false) then
-                player:delSeals(30,0);
+                player:delSeals(5,0);
                 player:addItem(1552);
                 player:messageSpecial(ITEM_OBTAINED,1552);
                 player:setVar("SkyOrbIsCracked",0);
@@ -319,9 +319,9 @@ function onEventFinish(player,csid,option)
             else
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,1552);
             end
-        elseif (option == 3 and BeastmensSeal >= 40) then   -- Player asked for Star orb
+        elseif (option == 3 and BeastmensSeal >= 10) then   -- Player asked for Star orb
             if (player:getFreeSlotsCount() >= 1 and player:hasItem(1131) == false) then
-                player:delSeals(40,0);
+                player:delSeals(10,0);
                 player:addItem(1131);
                 player:messageSpecial(ITEM_OBTAINED,1131);
                 player:setVar("StarOrbIsCracked",0);
@@ -330,9 +330,9 @@ function onEventFinish(player,csid,option)
             else
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,1131);
             end
-        elseif (option == 4 and BeastmensSeal >= 50) then   -- Player asked for Comet orb
+        elseif (option == 4 and BeastmensSeal >= 10) then   -- Player asked for Comet orb
             if (player:getFreeSlotsCount() >= 1 and player:hasItem(1177) == false) then
-                player:delSeals(50,0);
+                player:delSeals(10,0);
                 player:addItem(1177);
                 player:messageSpecial(ITEM_OBTAINED,1177);
                 player:setVar("CometOrbIsCracked",0);
@@ -341,9 +341,9 @@ function onEventFinish(player,csid,option)
             else
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,1177);
             end
-        elseif (option == 5 and BeastmensSeal >= 60) then   -- Player asked for Moon orb
+        elseif (option == 5 and BeastmensSeal >= 15) then   -- Player asked for Moon orb
             if (player:getFreeSlotsCount() >= 1 and player:hasItem(1130) == false) then
-                player:delSeals(60,0);
+                player:delSeals(15,0);
                 player:addItem(1130);
                 player:messageSpecial(ITEM_OBTAINED,1130);
                 player:setVar("MoonOrbIsCracked",0);
@@ -355,9 +355,9 @@ function onEventFinish(player,csid,option)
 ----------------------------------------------------------------------------------------------------------------------------
 -------- Begin KSNM orb Handout --------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
-        elseif (option == 6 and KindredsSeal >= 30) then   -- Player asked for Clotho Orb
+        elseif (option == 6 and KindredsSeal >= 5) then   -- Player asked for Clotho Orb
             if (player:getFreeSlotsCount() >= 1 and player:hasItem(1175) == false) then
-                player:delSeals(30,1);
+                player:delSeals(5,1);
                 player:addItem(1175);
                 player:messageSpecial(ITEM_OBTAINED,1175);
                 player:setVar("ClothoOrbIsCracked",0);
@@ -366,9 +366,9 @@ function onEventFinish(player,csid,option)
             else
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,1175);
             end
-        elseif (option == 7 and KindredsSeal >= 30) then   -- Player asked for Lachesis Orb
+        elseif (option == 7 and KindredsSeal >= 5) then   -- Player asked for Lachesis Orb
             if (player:getFreeSlotsCount() >= 1 and player:hasItem(1178) == false) then
-                player:delSeals(30,1);
+                player:delSeals(5,1);
                 player:addItem(1178);
                 player:messageSpecial(ITEM_OBTAINED,1178);
                 player:setVar("LachesisOrbIsCracked",0);
@@ -377,9 +377,9 @@ function onEventFinish(player,csid,option)
             else
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,1178);
             end
-            elseif (option == 8 and KindredsSeal >= 30) then  -- Player asked for Atropos Orb
+        elseif (option == 8 and KindredsSeal >= 5) then  -- Player asked for Atropos Orb
             if (player:getFreeSlotsCount() >= 1 and player:hasItem(1180) == false) then
-                player:delSeals(30,1);
+                player:delSeals(5,1);
                 player:addItem(1180);
                 player:messageSpecial(ITEM_OBTAINED,1180);
                 player:setVar("AtroposOrbIsCracked",0);
@@ -388,9 +388,9 @@ function onEventFinish(player,csid,option)
             else
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,1180);
             end
-        elseif (option == 9 and KindredsSeal >= 99) then   -- Player asked for Themis Orb
+        elseif (option == 9 and KindredsSeal >= 10) then   -- Player asked for Themis Orb
             if (player:getFreeSlotsCount() >= 1 and player:hasItem(1553) == false) then
-                player:delSeals(99,1);
+                player:delSeals(10,1);
                 player:addItem(1553);
                 player:messageSpecial(ITEM_OBTAINED,1553);
                 player:setVar("ThemisOrbIsCracked",0);
