@@ -106,7 +106,7 @@ AF3_FAME = 120; -- base fame for completing an AF3 quest
 DEBUG_MODE = 0; -- Set to 1 to activate auto-warping to the next location (only supported by certain missions / quests).
 QM_RESET_TIME = 300; -- Default time (in seconds) you have from killing ???-pop mission NMs to click again and get key item, until ??? resets.
 OldSchoolG1 = true; -- Set to true to require farming Exoray Mold, Bombd Coal, and Ancient Papyrus drops instead of allowing key item method.
-OldSchoolG2 = true; -- Set true to require the NMs for "Atop the Highest Mountains" be dead to get KI like before SE changed it.
+OldSchoolG2 = false; -- Set true to require the NMs for "Atop the Highest Mountains" be dead to get KI like before SE changed it.
 FrigiciteDuration = 60; -- When OldSChoolG2 is enabled, this is the time (in seconds) you have from killing Boreal NMs to click the "???" target.
 
 -- FIELDS OF VALOR/Grounds of Valor SETTINGS
@@ -129,7 +129,7 @@ BLINK_SHADOWS = 3;   -- number of shadows supplied by Blink spell
 ENSPELL_DURATION = 600; -- duration of RDM en-spells
 SPIKE_EFFECT_DURATION = 600; -- the duration of RDM, BLM spikes effects (not Reprisal)
 ELEMENTAL_DEBUFF_DURATION = 120; -- base duration of elemental debuffs
-AQUAVEIL_COUNTER = 2;  -- Base amount of hits Aquaveil absorbs to prevent spell interrupts. Retail is 1.
+AQUAVEIL_COUNTER = 3;  -- Base amount of hits Aquaveil absorbs to prevent spell interrupts. Retail is 1.
 ABSORB_SPELL_AMOUNT = 16; -- how much of a stat gets absorbed by DRK absorb spells - expected to be a multiple of 8.
 ABSORB_SPELL_TICK = 9; -- duration of 1 absorb spell tick
 SNEAK_INVIS_DURATION_MULTIPLIER = 10; -- multiplies duration of sneak,invis,deodorize to reduce player torture. 1 = retail behavior.
@@ -158,11 +158,11 @@ TIMEZONE_OFFSET = 9.0; -- Offset from UTC used to determine when "JP Midnight" i
 ALLOW_MULTIPLE_EXP_RINGS = 1; -- Set to 1 to remove ownership restrictions on the Chariot/Empress/Emperor Band trio.
 BYPASS_EXP_RING_ONE_PER_WEEK = 1; -- -- Set to 1 to bypass the limit of one ring per Conquest Tally Week.
 NUMBER_OF_DM_EARRINGS = 4; -- Number of earrings players can simultaneously own from Divine Might before scripts start blocking them (Default: 1)
-HOMEPOINT_TELEPORT = 0; -- Enables the homepoint teleport system
+HOMEPOINT_TELEPORT = 1; -- Enables the homepoint teleport system
 DIG_ABUNDANCE_BONUS = 450; -- Increase chance of digging up an item (450  = item digup chance +45)
 DIG_FATIGUE = 0; -- Set to 0 to disable Dig Fatigue
 MIASMA_FILTER_COOLDOWN = 5;  -- Number of days a player can obtain a Miasma Filter KI for any of the Boneyard Gully ENMs (Minimum:1)
-FORCE_SPAWN_QM_RESET_TIME = 120; -- Number of seconds the ??? remains hidden for after the despawning of the mob it force spawns.
+FORCE_SPAWN_QM_RESET_TIME = 60; -- Number of seconds the ??? remains hidden for after the despawning of the mob it force spawns.
 
 -- LIMBUS
 BETWEEN_2COSMOCLEANSE_WAIT_TIME = 1; -- day between 2 limbus keyitem  (default 3 days)

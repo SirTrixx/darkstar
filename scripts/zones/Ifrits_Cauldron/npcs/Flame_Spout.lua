@@ -14,11 +14,11 @@ require("scripts/globals/quests");
 
 function onTrade(player,npc,trade)
    local npcid = npc:getID();
-   if (trade:getItemCount() == 1 and trade:hasItemQty(4105,1) == true) then -- Ice Cluster Trade
+   if (trade:getItemCount() == 1 and trade:hasItemQty(4097,1) == true) then -- Ice Cluster Trade
       GetNPCByID(npcid+5):openDoor(90);
       player:tradeComplete();
    end
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
@@ -27,7 +27,7 @@ end;
 function onTrigger(player,npc)
     -- printf("%u",npc:getID())
     local npcid = npc:getID();
-    
+
    -- Commented out to preserve CSIDs for the quest, since the workaround was removed.
     --[[if (npcid == 17617204) then
         player:startEvent(0x000b);
@@ -38,7 +38,7 @@ function onTrigger(player,npc)
     elseif (npcid == 17617207) then
         player:startEvent(0x000e);
     end]]
-    
+
 end;
 -----------------------------------
 -- onEventUpdate
