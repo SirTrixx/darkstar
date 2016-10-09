@@ -382,8 +382,8 @@ uint8 calcSynthResult(CCharEntity* PChar)
 						case 4:  chance = 0.500; break;
 						case 3:  chance = 0.300; break;
 						case 2:  chance = 0.100; break;
-						case 1:  chance = 0.015; break;
-						default: chance = 0.000; break;
+						case 1:  chance = 0.050; break;
+						default: chance = 0.050; break;
 					}
 
 					if(chance > 0)
