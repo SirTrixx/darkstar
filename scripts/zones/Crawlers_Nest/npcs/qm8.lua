@@ -23,11 +23,11 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    
+
     local cprog = player:getVar("theCrimsonTrial_prog");
     local cdate = player:getVar("theCrimsonTrial_date");
-    local realday = tonumber(os.date("%j")); -- %M for next minute, %j for next day
-    
+    local realday = tonumber(os.date("%M")); -- %M for next minute, %j for next day
+
     if (player:hasKeyItem(CRAWLER_BLOOD) == true and player:hasKeyItem(OLD_BOOTS) == true) then
         player:startEvent(4);
     elseif (cprog == 1 and cdate == realday) then
@@ -37,8 +37,8 @@ function onTrigger(player,npc)
     else
         player:messageSpecial(SOMEONE_HAS_BEEN_DIGGING_HERE);
     end
-    
-end; 
+
+end;
 
 -----------------------------------
 -- onEventUpdate
@@ -60,11 +60,11 @@ function onEventFinish(player,csid,option)
     if (csid == 4 and option == 1) then
         player:delKeyItem(CRAWLER_BLOOD);
         player:delKeyItem(OLD_BOOTS);
-        player:setVar("theCrimsonTrial_date", os.date("%j")); -- %M for next minute, %j for next day
+        player:setVar("theCrimsonTrial_date", os.date("%M")); -- %M for next minute, %j for next day
         player:setVar("theCrimsonTrial_prog", 1);
         player:messageSpecial(YOU_BURY_THE,OLD_BOOTS,CRAWLER_BLOOD);
     elseif (csid == 5) then
-        if (player:getFreeSlotsCount() == 0) then 
+        if (player:getFreeSlotsCount() == 0) then
             player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,14093); -- Warlock's Boots
         else
             player:addItem(14093);
