@@ -29,12 +29,12 @@ function onTrigger(player,npc)
         0x0068,  3881,1,     --Tarutaru Folding Screen
 
         0x43B8,     5,2,     --Crossbow Bolt
-        0x43A6,     3,2,     --Wooden Arrow
+        0x43A6,     6,2,     --Wooden Arrow
         0x0070,   456,2,     --Yellow Jar
 
-        0x43A7,     4,3,     --Bone Arrow
+        0x43A7,     9,3,     --Bone Arrow
         0x00DA,   920,3,     --Earthen Flowerpot
-        0x43F4,     3,3,     --Little Worm
+        0x43F4,     9,3,     --Little Worm
         0x43F3,     9,3,     --Lugworm
         0x0762,   576,3,     --River Foliage
         0x13C9,   283,3,     --Earth Threnody
@@ -42,7 +42,7 @@ function onTrigger(player,npc)
         0x0763,   576,3,     --Sea Foliage
         0x005C,   905,3,     --Tarutaru Stool
         0x006E,  4744,3      --White Jar
-    } 
+    }
     showNationShop(player, WINDURST, stock);
 
 end;
